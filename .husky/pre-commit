@@ -1,4 +1,26 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+echo '- checking your code ...'
+
+npm run build:style ||
+(
+    echo '❌ Biuld Style Failed.';
+    false;
+)
+
+npm run check:format ||
+(
+    echo '❌ Prettier Check Failed.';
+    false;
+)
+
+npm run check:lint ||
+(
+        echo '❌ ESLint Check Failed.'
+        false; 
+)
+
+echo '✅ Done.'
+
 npx lint-staged
