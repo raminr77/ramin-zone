@@ -1,81 +1,23 @@
-*, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    user-select: none;
-    box-sizing: border-box;
-    font-family: 'Vazirmatn', sans-serif;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Vazirmatn', sans-serif;
 }
-
+html,
 body {
-    width: 100%;
-    color: #fff;
-    display: flex;
-    direction: rtl;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: #262626;
-    font-family: 'Vazirmatn', sans-serif;
+  direction: rtl;
+  scroll-behavior: smooth;
+  font-family: 'Vazirmatn', sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-/* Fonts */
-.en-font {
-    font-family: 'Preahvihear', sans-serif;
-}
-
-/* Styles */
-.container {
-    gap: 10px;
-    width: 90%;
-    z-index: 10;
-    padding: 20px;
-    display: flex;
-    max-width: 320px;
-    margin-top: 100px;
-    border-radius: 8px;
-    flex-direction: column;
-    backdrop-filter: blur(6px);
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Profile */
-.profile {
-    width: 100%;
-    display: flex;
-    margin-top: -150px;
-    margin-bottom: 20px;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-.profile__image {
-    width: 200px;
-    margin-bottom: 10px;
-    border-radius: 100%;
-    border: 10px solid #262626;
-}
-.profile__title {
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 12px;
-}
-.profile__description {
-    font-size: 16px;
-    font-weight: 300;
-}
-
-/* BTNs */
-.btn {
-    width: 100%;
-    color: #fff;
-    font-size: 16px;
-    line-height: 50px;
-    border-radius: 8px;
-    text-align: center;
-    transition-duration: 300ms;
-    background-color: #262626;
-}
+/* TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

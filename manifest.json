@@ -1,44 +1,45 @@
 {
-    "name": "Ramin Zone",
-    "author": "Ramin Rezaei",
-    "short_name": "Ramin Zone",
-    "icons": [{
-        "src": "icons/logo76.png",
-        "type": "icons/png",
-        "sizes": "76x76"
-      },
-      {
-        "src": "icons/logo96.png",
-        "type": "icons/png",
-        "sizes": "96x96"
-      },
-      {
-        "src": "icons/logo120.png",
-        "type": "icons/png",
-        "sizes": "120x120"
-      },
-      {
-        "src": "icons/logo152.png",
-        "type": "icons/png",
-        "sizes": "152x152"
-      },
-      {
-        "src": "icons/logo192.png",
-        "type": "icons/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "icons/logo512.png",
-        "type": "icons/png",
-        "sizes": "512x512"
-      }
-    ],
-    "dir": "rtl",
-    "lang": "fa-IR",
-    "start_url": "/",
-    "theme_color": "#000",
-    "display": "standalone",
-    "orientation": "portrait",
-    "background_color": "#fff",
-    "description": "Ramin Zone - Ramin Rezaei Personal Page."
-  }
+  "name": "Ramin Zone",
+  "author": "Ramin Rezaei",
+  "short_name": "Ramin Zone",
+  "icons": [
+    {
+      "src": "assets/icons/logo76.png",
+      "type": "icons/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "assets/icons/logo96.png",
+      "type": "icons/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "assets/icons/logo120.png",
+      "type": "icons/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "assets/icons/logo152.png",
+      "type": "icons/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "assets/icons/logo192.png",
+      "type": "icons/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/icons/logo512.png",
+      "type": "icons/png",
+      "sizes": "512x512"
+    }
+  ],
+  "dir": "rtl",
+  "lang": "fa-IR",
+  "start_url": "/",
+  "theme_color": "#000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "description": "Ramin Zone - Ramin Rezaei Personal Page."
+}

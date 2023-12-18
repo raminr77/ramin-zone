@@ -1,0 +1,7 @@
+*.svg
+*.png
+*.jpg
+assets
+.history
+node_modules
+*.webmanifest
