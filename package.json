@@ -10,9 +10,7 @@
     "lint": "eslint --fix",
     "format": "prettier --write .",
     "check:lint": "eslint . --ext js",
-    "check:format": "npx prettier . --check --ignore-unknown",
-    "watch:style": "npx tailwindcss -i main.css -o main.min.css --watch",
-    "build:style": "npx tailwindcss -i main.css -o main.min.css --minify"
+    "check:format": "npx prettier . --check --ignore-unknown"
   },
   "lint-staged": {
     "**/*.js": [
@@ -43,7 +41,6 @@
     "eslint-plugin-prettier": "^5.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
-    "prettier": "3.1.1",
-    "tailwindcss": "^3.3.6"
+    "prettier": "3.1.1"
   }
 }

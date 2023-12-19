@@ -3,12 +3,6 @@
 
 echo '- checking your code ...'
 
-npm run build:style ||
-(
-    echo '❌ Biuld Style Failed.';
-    false;
-)
-
 npm run check:format ||
 (
     echo '❌ Prettier Check Failed.';

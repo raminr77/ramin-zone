@@ -48,13 +48,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;800&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;800&display=swap"
     />
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./main.min.css" />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
     <!-- JS -->
     <script src="./main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <main class="container js-container">
+      <section class="profile">
+        <img
+          src="./assets/images/Ramin.jpeg"
+          class="profile__image js-profile"
+          alt="Ramin Rezaei - Ramin Zone - رامین رضائی"
+        />
+        <h1 class="profile__title">رامــین رضــائـی</h1>
+        <h3 class="profile__sub-title">Ramin Zone</h3>
+      </section>
+
+      <!-- Menu -->
+      <ul class="menu">
+        <li class="menu__item menu__item--youtube" data-index="0">
+          <a href="https://www.youtube.com/@raminzone" target="_blank">
+            <img alt="ramin zone - youtube" src="./assets/images/youtube.png" />
+            کانال یوتیوب
+          </a>
+        </li>
+        <li class="menu__item menu__item--instagram" data-index="1">
+          <a href="https://www.instagram.com/ramin.zone/" target="_blank">
+            <img alt="ramin zone - رامین رضایی" src="./assets/images/instagram.png" />
+            صفحـه اینستاگـرام
+          </a>
+        </li>
+        <li class="menu__item menu__item--linkedin" data-index="2">
+          <a href="https://www.linkedin.com/in/raminr77" target="_blank">
+            <img alt="ramin zone - رامین رضایی" src="./assets/images/linkedin.png" />
+            رزومه و صفحـه لینکـدین
+          </a>
+        </li>
+        <li class="menu__item menu__item--question" data-index="3">
+          <a href="" target="_blank">
+            <img alt="ramin zone - رامین رضایی" src="./assets/images/question.png" />
+            سـوالات مـتداول و مهاجرت
+          </a>
+        </li>
+        <li class="menu__item menu__item--message" data-index="4">
+          <a href="" target="_blank">
+            <img alt="ramin zone - رامین رضایی" src="./assets/images/message.png" />
+            تماس و ارتباط بیشتر با رامــین
+          </a>
+        </li>
+      </ul>
+    </main>
+    <div class="absolute-element" />
+  </body>
 </html>
