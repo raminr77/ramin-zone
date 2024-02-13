@@ -29,53 +29,30 @@ a {
   text-decoration: none;
 }
 
+.hidden {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
 .container {
   width: 90%;
   z-index: 2;
   transition: all;
+  overflow-y: auto;
   max-width: 360px;
   border-radius: 8px;
+  overflow-x: hidden;
+  position: relative;
+  padding-bottom: 16px;
   transition-duration: 300ms;
   backdrop-filter: blur(3px);
   border: 2px solid transparent;
+  max-height: calc(100vh - 100px);
   /* STATIC */
   border-color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 300px 20px rgba(255, 255, 255, 0.4);
-  /* ANIMATE */
-  /* animation: 10s light-animation ease infinite alternate; */
-}
-@keyframes light-animation {
-  0% {
-    border-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 300px 20px rgba(255, 255, 255, 0.4);
-  }
-  20% {
-    border-color: rgb(0, 255, 130);
-    background-color: rgba(0, 255, 130, 0.2);
-    box-shadow: 0 0 300px 20px rgba(0, 255, 130, 0.4);
-  }
-  40% {
-    border-color: rgb(255, 0, 130);
-    background-color: rgba(255, 0, 130, 0.2);
-    box-shadow: 0 0 300px 20px rgba(255, 0, 130, 0.4);
-  }
-  60% {
-    border-color: rgb(255, 200, 0);
-    background-color: rgba(255, 200, 0, 0.2);
-    box-shadow: 0 0 300px 20px rgba(255, 200, 0, 0.4);
-  }
-  80% {
-    border-color: rgb(0, 200, 255);
-    background-color: rgba(0, 200, 255, 0.2);
-    box-shadow: 0 0 300px 20px rgba(0, 200, 255, 0.4);
-  }
-  100% {
-    border-color: rgb(200, 0, 255);
-    background-color: rgba(200, 0, 255, 0.2);
-    box-shadow: 0 0 300px 20px rgba(200, 0, 255, 0.4);
-  }
 }
 
 /* profile */
@@ -109,10 +86,13 @@ a {
   gap: 6px;
   width: 100;
   display: flex;
+  transition: all;
+  overflow: hidden;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin: 30px auto 16px auto;
+  margin: 30px auto 0 auto;
+  transition-duration: 400ms;
 }
 .menu__item {
   width: 100%;
@@ -149,6 +129,38 @@ a {
 }
 .menu__item--message:hover {
   background: linear-gradient(90deg, rgba(156, 136, 254, 0.6) 50%, transparent 100%);
+}
+
+.return-btn {
+  width: 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+.content h3 {
+  width: 100%;
+  font-size: 16px;
+}
+.content p {
+  width: 100%;
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.content p:last-child {
+  margin-bottom: 0;
 }
 
 /* elm */

@@ -44,7 +44,12 @@ const COLORS = [
 ];
 
 const PROFILE = document.querySelector('.js-profile');
+const MAIN_MENU = document.querySelector('.js-main-menu');
+const RETURN_BTN = document.querySelector('.js-return-btn');
 const CONTAINER_BOX = document.querySelector('.js-container');
+
+const QA_CONTENT = document.querySelector('.js-qa-content');
+const CONTACT_CONTENT = document.querySelector('.js-contact-content');
 
 const setColors = (colorIndex = 5) => {
   const { R, G, B } = COLORS[colorIndex];
@@ -62,7 +67,37 @@ const setColors = (colorIndex = 5) => {
 const randomInt = (min = 0, max = 255) =>
   Math.floor(Math.random() * (max - min + 1) + min);
 
+const mainMenuHandler = (show = false) => {
+  RETURN_BTN.classList.toggle('hidden');
+
+  if (show) {
+    MAIN_MENU.classList.remove('hidden');
+    // HIDDEN CONTENT
+    QA_CONTENT.classList.add('hidden');
+    CONTACT_CONTENT.classList.add('hidden');
+    return;
+  }
+  MAIN_MENU.classList.add('hidden');
+};
+
+RETURN_BTN.addEventListener('click', (e) => {
+  e.preventDefault();
+  mainMenuHandler(true);
+});
+
 document.querySelectorAll('li').forEach((item) => {
   item.addEventListener('mouseleave', () => setColors(5));
   item.addEventListener('mouseover', () => setColors(item.dataset.index || 5));
+});
+
+document.querySelector('.js-qa-btn').addEventListener('click', (e) => {
+  e.preventDefault();
+  mainMenuHandler();
+  QA_CONTENT.classList.remove('hidden');
+});
+
+document.querySelector('.js-contact-btn').addEventListener('click', (e) => {
+  e.preventDefault();
+  mainMenuHandler();
+  CONTACT_CONTENT.classList.remove('hidden');
 });
