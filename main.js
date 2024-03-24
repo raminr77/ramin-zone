@@ -82,6 +82,7 @@ const mainMenuHandler = (show = false) => {
 
 RETURN_BTN.addEventListener('click', (e) => {
   e.preventDefault();
+  CONTAINER_BOX.scroll(0, 0);
   mainMenuHandler(true);
 });
 
