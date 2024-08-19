@@ -15,17 +15,20 @@ jobs:
     - name: 🔍 Check out code
       uses: actions/checkout@v2
 
-    - name: ⚡️ Update README
-      run: |
-        echo "Making daily contribution"
-        echo "<br />- $(date)" >> README.md
-    - name: ✅ Commit & Push
+    - name: ⚡️ GitHub Connection
       run: |
         git config --local user.email "ramin.rezaei77@gmail.com"
         git config --local user.name "Ramin"
         git remote set-url origin https://$GITHUB_TOKEN@github.com/raminr77/ramin-zone.git
+        git pull
+
+    - name: ⚡️ Update README
+      run: |
+        echo "<br />- $(date)" >> README.md
+    - name: ✅ Commit & Push
+      run: |
         git add README.md
-        git commit -m "New Emoji Added $RANDOM_EMOJI"
+        git commit -m "Update README File"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
