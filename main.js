@@ -55,7 +55,6 @@ const setColors = (colorIndex = 5) => {
   const { R, G, B } = COLORS[colorIndex];
   const SIZE = randomInt(270, 300);
   // PROFILE
-  PROFILE.style.border = `4px solid rgb(${R}, ${G}, ${B})`;
   PROFILE.style.backgroundColor = `rgba(${R}, ${G}, ${B}, 0.1)`;
   PROFILE.style.boxShadow = `0 0 ${SIZE}px 20px rgba(${R}, ${G}, ${B}, 0.4)`;
   // CONTAINER
