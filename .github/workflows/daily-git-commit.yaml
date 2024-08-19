@@ -17,10 +17,8 @@ jobs:
 
     - name: ⚡️ Update README
       run: |
-        EMOJIS=(":smile:" ":laughing:" ":blush:" ":smiley:" ":relaxed:" ":smirk:" ":heart_eyes:" ":kissing_heart:" ":kissing_closed_eyes:" ":flushed:" ":relieved:" ":satisfied:" ":grin:" ":wink:" ":stuck_out_tongue_winking_eye:" ":stuck_out_tongue_closed_eyes:" ":grinning:" ":kissing:" ":kissing_smiling_eyes:" ":stuck_out_tongue:")
-        RANDOM_EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]}
-        sed -i "/$RANDOM_EMOJI/{s/| [0-9]* |/ $((`grep -o '[0-9]*' <<< $(grep $RANDOM_EMOJI README.md)`+1)) |/}" README.md
-
+        echo "Making daily contribution"
+        echo "$(date)" >> README.md
     - name: ✅ Commit & Push
       run: |
         git config --local user.email "ramin.rezaei77@gmail.com"
