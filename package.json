@@ -1,0 +1,46 @@
+{
+  "name": "ramin-zone",
+  "license": "ISC",
+  "main": "main.js",
+  "version": "1.0.0",
+  "author": "Ramin Rezaei",
+  "homepage": "https://raminzone.ir",
+  "description": "Personal Web Page For Instagram Account - Ramin Zone",
+  "scripts": {
+    "lint": "eslint --fix",
+    "format": "prettier --write .",
+    "check:lint": "eslint . --ext js",
+    "check:format": "npx prettier . --check --ignore-unknown"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --write --ignore-unknown",
+      "eslint --fix"
+    ],
+    "**/*.{json,css,scss,html}": "prettier --write --ignore-unknown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raminr77/ramin-zone.git"
+  },
+  "keywords": [
+    "zone",
+    "ramin",
+    "ramin zone",
+    "ramin rezaei"
+  ],
+  "bugs": {
+    "url": "https://github.com/raminr77/ramin-zone/issues"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "3.1.1"
+  }
+}
