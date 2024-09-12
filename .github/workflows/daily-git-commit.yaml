@@ -35,10 +35,14 @@ jobs:
         RANDOM_NUMBER=${RANDOM:0:1}
         for (( i=1; i<=RANDOM_NUMBER; i++ ))
         do
-          echo "- $(date) <br />" >> DATES.TXT
+          echo "- $(date)" >> DATES.TXT
           git add DATES.TXT
-          git commit -m "Update TXT File"
+          git commit -m "feat: Update TXT File"
         done
+        
+        echo "-------------------------------" >> DATES.TXT
+        git add DATES.TXT
+        git commit -m "feat(TXT File): Add a line to the end of the file"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
