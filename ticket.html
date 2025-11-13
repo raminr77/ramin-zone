@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aztec Ticket - 10 Day Validity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        background: #000000;
+        justify-content: center;
+      }
+      #aztec {
+        width: 70vmin;
+        height: 70vmin;
+        max-width: 500px;
+        max-height: 500px;
+        border-radius: 4px;
+        background: #ffffff;
+      }
+    </style>
+
+    <!-- Aztec renderer -->
+    <script src="https://cdn.jsdelivr.net/npm/bwip-js@3.4.3/dist/bwip-js.min.js"></script>
+  </head>
+  <body>
+    <canvas id="aztec" width="640" height="640"></canvas>
+
+    <script>
+      // Single ticket window: issued once, expires after 10 days
+      let timerId = null;
+      let ticketIssuedAt = null;
+      let ticketExpiresAt = null;
+
+      function isoZ(d) {
+        const s = d.toISOString();
+        return s.slice(0, 19) + "Z";
+      }
+
+      function randToken(len = 6) {
+        return Math.random()
+          .toString(36)
+          .slice(2, 2 + len)
+          .toUpperCase();
+      }
+
+      function initTicket() {
+        if (ticketIssuedAt && ticketExpiresAt) {
+          return;
+        }
+        const now = new Date();
+        ticketIssuedAt = now;
+        ticketExpiresAt = new Date(now.getTime() + 10 * 24 * 60 * 60 * 1000); // 10 days
+      }
+
+      function buildPayload() {
+        initTicket();
+        const atp = isoZ(ticketIssuedAt);
+        const exp = isoZ(ticketExpiresAt);
+        const rand = randToken(6);
+
+        return `¢apY\u0001iXG¥atp${atp}Zcappb10calgiHS256-128ckidj${rand}cexpp${exp}Zcdspb10Xr¡b10¥dc_vna1dc_vma1dc_vta1dc_md`;
+      }
+
+      function drawAztec(text) {
+        const canvas = document.getElementById("aztec");
+        bwipjs.toCanvas(canvas, {
+          text,
+          scale: 4,
+          padding: 4,
+          eclevel: 23,
+          bcid: "azteccode",
+          includetext: false,
+          backgroundcolor: "FFFFFF",
+        });
+      }
+
+      function tick() {
+        const payload = buildPayload();
+        drawAztec(payload);
+        console.log(payload);
+      }
+
+      function start() {
+        if (timerId) {
+          clearInterval(timerId);
+        }
+        tick();
+        timerId = setInterval(tick, 1000);
+      }
+
+      start();
+    </script>
+  </body>
+</html>
