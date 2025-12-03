@@ -1,8 +1,14 @@
-<!doctype html>
-<html lang="fa-IR">
+<!DOCTYPE html>
+<html lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <title>Ramin Zone - رامین رضائی</title>
+    <title>Ramin Rezaei - Ramin Zone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap"
+    />
+    <link type="text/css" rel="stylesheet" href="./main.css" />
     <!-- SEO Tags -->
     <meta name="language" content="fa" />
     <link rel="manifest" href="./manifest.json" />
@@ -14,7 +20,7 @@
     <meta http-equiv="content-language" content="en" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/png" href="./assets/icons/favicon.png" />
+    <link rel="icon" type="image/png" href="./images/icon.png" />
     <!-- MAIN Tags -->
     <meta name="copyright" content="2024" />
     <meta name="theme-color" content="#000" />
@@ -23,7 +29,10 @@
     <link rel="canonical" href="https://www.raminzone.ir" />
     <meta name="msapplication-navbutton-color" content="#000000" />
     <meta content="Ramin Zone" name="apple-mobile-web-app-title" />
-    <meta name="description" content="Ramin Zone - Ramin Rezaei Personal Page." />
+    <meta
+      name="description"
+      content="Ramin Zone - Ramin Rezaei Personal Page."
+    />
     <meta
       name="viewport"
       content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no"
@@ -34,94 +43,85 @@
     />
     <meta name="msapplication-starturl" content="/" />
     <meta name="msapplication-tooltip" content="Ramin Zone" />
-    <!-- IOS Tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta content="default" name="apple-mobile-web-app-status-bar-style" />
-    <link sizes="76x76" rel="apple-touch-icon" href="./assets/icons/logo76.png" />
-    <link sizes="120x120" rel="apple-touch-icon" href="./assets/icons/logo120.png" />
-    <link sizes="152x152" rel="apple-touch-icon" href="./assets/icons/logo152.png" />
-    <link sizes="192x192" rel="apple-touch-icon" href="./assets/icons/logo192.png" />
-    <!-- Windows Tags -->
-    <meta content="./assets/icons/logo192.png" name="msapplication-TileImage" />
-    <meta name="msapplication-config" content="browserconfig.xml" />
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;800&display=swap"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./main.css" />
-    <!-- JS -->
-    <script src="./main.js" defer></script>
   </head>
   <body>
-    <main class="container js-container">
-      <!-- IMAGE -->
-      <section class="profile">
-        <img
-          src="./assets/images/Ramin.jpeg"
-          class="profile__image js-profile"
-          alt="Ramin Rezaei - Ramin Zone - رامین رضائی"
-        />
-        <h1 class="profile__title">رامــین رضــائـی</h1>
-        <h3 class="profile__sub-title">Ramin Zone</h3>
+    <main class="card">
+      <header class="top-row">
+        <div class="avatar">
+          <div class="avatar-inner">
+            <img src="./images/Ramin.jpg" alt="Ramin Rezaei" />
+          </div>
+        </div>
+        <div class="title-block">
+          <div class="name">رامــیـن رضائـی</div>
+          <div class="role">Software Engineer . Web Developer</div>
+        </div>
+      </header>
+
+      <div class="section-label">کی هست ؟</div>
+
+      <section class="about">
+        رامین رضایی یک مهندس نرم‌افزار و توسعه‌دهنده وب با بیش از ۸ سال سابقه
+        کار هست. بیشترین تمرکز اون ساخت برنامه‌های وب توی حوزه های مختلف بوده
+        است.
+        <br />
+        علاقه‌مند به یادگیری تکنولوژی‌های جدید و به‌کارگیری اون‌ها در پروژه‌ها
+        برای حل مسائل واقعی و یادگیری و آموزش تکنولوژی‌های تحت وب هست.
+        <br />
+        خب دیگه فکر کنم همینقدر کافیه ...
       </section>
 
-      <!-- Menu -->
-      <ul class="menu js-main-menu">
-        <li class="menu__item menu__item--youtube" data-index="0">
-          <a href="https://www.youtube.com/@raminzone" target="_blank">
-            <img alt="ramin zone - youtube" src="./assets/images/youtube.png" />
-            کانال یوتیوب
-          </a>
-        </li>
-        <li class="menu__item menu__item--instagram" data-index="1">
-          <a href="https://www.instagram.com/ramin.zone/" target="_blank">
-            <img alt="ramin zone - رامین رضایی" src="./assets/images/instagram.png" />
-            صفحـه اینستاگـرام
-          </a>
-        </li>
-        <li class="menu__item menu__item--linkedin" data-index="2">
-          <a href="https://www.linkedin.com/in/raminr77" target="_blank">
-            <img alt="ramin zone - رامین رضایی" src="./assets/images/linkedin.png" />
-            رزومه و صفحـه لینکـدین
-          </a>
-        </li>
-        <li class="menu__item menu__item--question" data-index="3">
-          <a href="" target="_blank" class="js-qa-btn">
-            <img alt="ramin zone - رامین رضایی" src="./assets/images/question.png" />
-            سـوالات مـتداول و مهاجرت
-          </a>
-        </li>
-        <li class="menu__item menu__item--message" data-index="4">
-          <a href="" target="_blank" class="js-contact-btn">
-            <img alt="ramin zone - رامین رضایی" src="./assets/images/message.png" />
-            تماس و ارتباط بیشتر با رامــین
-          </a>
-        </li>
-      </ul>
+      <div class="section-label">ارسال ایمیل</div>
+      <a href="mailto:ramin@example.com">
+        <div class="email-link">Info@RaminRezaei.se</div>
+      </a>
 
-      <!-- QA -->
-      <div class="js-qa-content hidden content">
-        <h3>مهاجرت کاری و تحصیلی</h3>
-        <p>
-          من سعی کردم تمام اطلاعاتی که درباره مهاجرت کاری و تحصیلی دارم را به صورت ویدیو های کامل توی یوتیوب آپلود کنم! یعنی از صفر تا صد مراحل مهاجرت کاری و تحصیلی رو به همراه آدرس سایت های که نیاز دارید مدارکی که نیاز دارید و نحوه نگارش رزومه و ... به صورت کامل داخل یوتیوب گزاشتم.
-        </p>
-        <a href="https://www.youtube.com/@raminzone" class="link-btn" target="_blank">YouTube</a>
-      </div>
+      <div class="section-label">تماس با رامین</div>
 
-      <!-- CONTACT -->
-      <div class="js-contact-content hidden content">
-        <p>شما از طریق راه های ارتباطی زیر میتوانید با من در تماس باشید و من سعی میکنم در سریع ترین زمان ممکن به شما جواب بدم.</p>
-        <a target="_blank" class="link-btn" href="https://raminrezaei.ir">RaminRezaei.ir</a>
-        <a target="_blank" class="link-btn" href="mailto:ramin.rezaei77@gmail.com">Ramin.Rezaei77@gmail.com</a>
-      </div>
+      <section class="links">
+        <a class="link-btn" href="#" target="_blank" rel="noopener noreferrer">
+          <div class="link-left">
+            <span class="label">جلسه مشاوره ۳۰ دقیقه ای رایگان</span>
+          </div>
+          <span class="link-arrow">↗</span>
+        </a>
 
-      <!-- RETURN -->
-      <button class="return-btn js-return-btn hidden">صفحه اصلی</button>
+        <a
+          target="_blank"
+          class="link-btn"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/raminr77/"
+        >
+          <div class="link-left">
+            <span class="label">لینکدین و رزومه کاری</span>
+          </div>
+          <span class="link-arrow">↗</span>
+        </a>
+
+        <a
+          class="link-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://raminrezaei.se"
+        >
+          <div class="link-left">
+            <span class="label">وب سایت شخصی</span>
+          </div>
+          <span class="link-arrow">↗</span>
+        </a>
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-btn youtube-color"
+          href="https://www.youtube.com/@RaminZone"
+        >
+          <div class="link-left">
+            <span class="label">کانال YouTube</span>
+          </div>
+          <span class="link-arrow">↗</span>
+        </a>
+      </section>
     </main>
-    <div class="absolute-element" />
   </body>
 </html>

@@ -1,9 +1,0 @@
-*.svg
-*.png
-*.jpg
-*.lock
-assets
-.history
-*.min.css
-node_modules
-*.webmanifest
