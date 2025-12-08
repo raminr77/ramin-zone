@@ -52,9 +52,9 @@
   "dir": "rtl",
   "lang": "fa-IR",
   "start_url": "/",
-  "theme_color": "#000",
   "display": "standalone",
+  "theme_color": "#101827",
   "orientation": "portrait",
-  "background_color": "#000",
+  "background_color": "#101827",
   "description": "Ramin Zone - Ramin Rezaei Personal Page."
 }
